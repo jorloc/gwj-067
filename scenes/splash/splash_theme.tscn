@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cehgfowue3b3w"]
+
+[ext_resource type="Script" path="res://scenes/splash/splash_theme.gd" id="1_ooond"]
+[ext_resource type="Texture2D" uid="uid://dv70cn0lpbkni" path="res://art/splash/Jam #66/66-Escape.png" id="3_ue8p3"]
+[ext_resource type="Texture2D" uid="uid://t185dh3max4c" path="res://art/splash/Jam #66/Et-tu-Brute.png" id="4_om2sc"]
+[ext_resource type="Texture2D" uid="uid://ca7fl4iekxwwc" path="res://art/splash/Jam #66/then-the-morning-comes.png" id="5_ka423"]
+[ext_resource type="Texture2D" uid="uid://dkv1wwvbr2bvt" path="res://art/splash/Jam #66/inside-box.png" id="6_2epwt"]
+
+[node name="splash_theme" type="Node2D"]
+script = ExtResource("1_ooond")
+
+[node name="BgRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.0784314, 0.133333, 0.25098, 1)
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 100.0
+offset_right = 2800.0
+offset_bottom = 1782.0
+scale = Vector2(0.4, 0.4)
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ue8p3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+alignment = 1
+
+[node name="WC1" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_om2sc")
+
+[node name="WC2" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_ka423")
+
+[node name="WC3" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_2epwt")
+
+[node name="AlphaRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.392157)
+metadata/_edit_lock_ = true

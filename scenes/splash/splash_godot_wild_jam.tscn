@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ak1d0ciwkc7"]
+
+[ext_resource type="Texture2D" uid="uid://c7h1y62ssgt8p" path="res://art/splash/GWJ-Full-Logo-tag-4k.png" id="1_5dbnw"]
+[ext_resource type="Script" path="res://scenes/splash/splash_godot_wild_jam.gd" id="1_6ihrw"]
+[ext_resource type="Texture2D" uid="uid://ceiquy7xll3r7" path="res://art/kenney/googly/googly-a.png" id="3_d1adf"]
+[ext_resource type="Texture2D" uid="uid://ijyk0ht1ocp1" path="res://art/kenney/googly/googly-b.png" id="4_vgpm8"]
+
+[node name="SplashGodotWildJam" type="Node2D"]
+script = ExtResource("1_6ihrw")
+
+[node name="BgRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.0784314, 0.133333, 0.25098, 1)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-360, -197)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5dbnw")
+centered = false
+
+[node name="AlphaRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.392157)
+metadata/_edit_lock_ = true
+
+[node name="Googly-a2" type="Sprite2D" parent="."]
+position = Vector2(561, 268)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_vgpm8")
+
+[node name="Googly-a" type="Sprite2D" parent="."]
+position = Vector2(732, 263)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_d1adf")
+
+[node name="AlphaRect2" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.392157)
+metadata/_edit_lock_ = true

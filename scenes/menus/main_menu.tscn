@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://cukpmvayq8ata"]
+
+[ext_resource type="Script" path="res://scenes/menus/main_menu.gd" id="1_arp2i"]
+[ext_resource type="Texture2D" uid="uid://knd4aje7604i" path="res://art/kenney/ui/blue_panel.png" id="2_oov0a"]
+[ext_resource type="Texture2D" uid="uid://8deafdo61o4l" path="res://art/kenney/ui/green_button04.png" id="3_if8fk"]
+[ext_resource type="Texture2D" uid="uid://14anu8gtf8qr" path="res://art/kenney/ui/green_button05.png" id="4_s4t4k"]
+[ext_resource type="Texture2D" uid="uid://p8n1165ytxut" path="res://art/kenney/ui/green_button06.png" id="5_cjbig"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arp2i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("2_oov0a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 160.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ExitButton2" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_if8fk")
+texture_pressed = ExtResource("4_s4t4k")
+texture_hover = ExtResource("4_s4t4k")
+texture_disabled = ExtResource("5_cjbig")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ExitButton2"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 49.0
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_if8fk")
+texture_pressed = ExtResource("4_s4t4k")
+texture_hover = ExtResource("4_s4t4k")
+texture_disabled = ExtResource("5_cjbig")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CreditsButton"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 49.0
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_if8fk")
+texture_pressed = ExtResource("4_s4t4k")
+texture_hover = ExtResource("4_s4t4k")
+texture_disabled = ExtResource("5_cjbig")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ExitButton"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 49.0
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

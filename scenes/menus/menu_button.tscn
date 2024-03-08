@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy0714b8vr7p3"]
+
+[ext_resource type="Texture2D" uid="uid://dlt6sv543oar5" path="res://art/kenney/ui/blue_button04.png" id="1_df83q"]
+[ext_resource type="Texture2D" uid="uid://db1548kp5202y" path="res://art/kenney/ui/blue_button05.png" id="2_gvy1f"]
+[ext_resource type="Texture2D" uid="uid://bs5jhw87dhoh4" path="res://art/kenney/ui/blue_button06.png" id="3_220cu"]
+[ext_resource type="Script" path="res://scenes/menus/menu_button.gd" id="4_0vh2u"]
+
+[node name="MenuButton" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_df83q")
+texture_pressed = ExtResource("2_gvy1f")
+texture_hover = ExtResource("2_gvy1f")
+texture_disabled = ExtResource("3_220cu")
+script = ExtResource("4_0vh2u")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(190, 49)
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 49.0
+text = "Words"
+horizontal_alignment = 1
+vertical_alignment = 1

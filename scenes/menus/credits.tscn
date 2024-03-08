@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://t5md6yc4es1t"]
+
+[ext_resource type="Script" path="res://scenes/menus/credits.gd" id="1_72a0i"]
+[ext_resource type="Texture2D" uid="uid://8deafdo61o4l" path="res://art/kenney/ui/green_button04.png" id="1_fdx2r"]
+[ext_resource type="Texture2D" uid="uid://14anu8gtf8qr" path="res://art/kenney/ui/green_button05.png" id="2_k6tw5"]
+[ext_resource type="Texture2D" uid="uid://p8n1165ytxut" path="res://art/kenney/ui/green_button06.png" id="3_icqcd"]
+[ext_resource type="Texture2D" uid="uid://bc3f6nlnv8f3s" path="res://art/splash/joe.png" id="5_gix8o"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_72a0i")
+
+[node name="BgRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.0784314, 0.133333, 0.25098, 1)
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_constants/margin_top = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "CREDITS
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Adam Gulasci"
+horizontal_alignment = 1
+
+[node name="AlphaRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Label4"]
+offset_right = 1280.0
+offset_bottom = 50.0
+color = Color(0, 0, 0, 0.392157)
+metadata/_edit_lock_ = true
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "I would not have picked up Godot if it were not for the amazing Deckbuilder YouTube Tutorials by Adam Gulacsi (guladam.)
+He has my sincerest thanks for breaking things down so deeply, teaching so well, and providing the finished source.
+It made jumping into things, understanding how game elements are represented in the engine so much easier.
+I am entering this Jam two weeks after discovering Godot. That's a testament to the effectiveness of the tutotial.
+Seriously, this was way to many words, but thank you Adam."
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Kenney.nl"
+horizontal_alignment = 1
+
+[node name="AlphaRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Label6"]
+offset_right = 1280.0
+offset_bottom = 50.0
+color = Color(0, 0, 0, 0.392157)
+metadata/_edit_lock_ = true
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "One of the reasons I never seriously considered game development previously is my lack of artistic ability.
+
+I have tried several times to get a game off the ground in one form or another over the years, and invariably get
+frustrated when it starts working, but \"isn't pretty enough.\"
+
+Kenney has provided a plethora of 2D and 3D art assets that made it very easy to hit the ground running, and get to the business of making a game.
+
+The \"pretty\" all but came for free."
+horizontal_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("1_fdx2r")
+texture_pressed = ExtResource("2_k6tw5")
+texture_hover = ExtResource("2_k6tw5")
+texture_disabled = ExtResource("3_icqcd")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ExitButton"]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 49.0
+text = "Back to Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Joe" type="Sprite2D" parent="."]
+position = Vector2(1122, 540)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_gix8o")
+centered = false
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
